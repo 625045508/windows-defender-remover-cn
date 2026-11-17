@@ -10,7 +10,10 @@
 > **关于本中文版**
 > 这是 [ionuttbara/windows-defender-remover](https://github.com/ionuttbara/windows-defender-remover)（v13.1）的简体中文汉化分支，由 **DeepSeek Harness** 完成界面与提示文案汉化：
 > 菜单、确认提示、备份/恢复输出、错误信息、批处理与 `verify.bat` 校验脚本全部中文；日志文件里的状态枚举（`FilesOnly`/`RemovedNotRestorable`/`AlreadyAbsent` 等）保持英文，方便对照上游排查。批处理统一 `chcp 65001` 切换到 UTF-8，避免中文乱码。
-> **这个工具会真的删除系统安全组件，脚本本身没有在汉化过程中被执行验证**（只做了 PowerShell 语法解析与逐行核对）。请自行备份、建还原点后再用。
+> **这个工具会真的删除系统安全组件，删除流程没有在汉化过程中被执行过**（只做了 PowerShell 语法解析、逐行核对，以及菜单/进程检测部分的中文运行验证）。请自行备份、建还原点后再用。
+>
+> **已编译版本：** `Defender-Remover-13.1-cn.exe`（1.4 MB，PS2EXE 打包，把 `script\` 下的脚本与注册表文件全部 base64 内嵌，运行时解包到 `%TEMP%\Script_Run_Payload` 再以管理员权限启动）。双击即可，未做代码签名，SmartScreen 可能提示未知发布者。
+> 想自己编译：`Install-Module PS2EXE -Scope CurrentUser`，然后在 `script\` 目录运行 `powershell -ExecutionPolicy Bypass -File Build.ps1`。
 
 ## 项目模块
 
