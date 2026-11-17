@@ -15,6 +15,15 @@
 > **已编译版本：** `Defender-Remover-13.1-cn.exe`（1.4 MB，PS2EXE 打包，把 `script\` 下的脚本与注册表文件全部 base64 内嵌，运行时解包到 `%TEMP%\Script_Run_Payload` 再以管理员权限启动）。双击即可，未做代码签名，SmartScreen 可能提示未知发布者。
 > 想自己编译：`Install-Module PS2EXE -Scope CurrentUser`，然后在 `script\` 目录运行 `powershell -ExecutionPolicy Bypass -File Build.ps1`。
 
+## 下载（不用自己编译）
+
+| 文件 | 说明 |
+|---|---|
+| [`Defender-Remover-13.1-cn.exe`](https://github.com/625045508/windows-defender-remover-cn/releases/download/v13.1-cn/Defender-Remover-13.1-cn.exe) | 单文件版，双击即用 |
+| [`windows-defender-remover-cn-13.1.zip`](https://github.com/625045508/windows-defender-remover-cn/releases/download/v13.1-cn/windows-defender-remover-cn-13.1.zip) | 源码包（不含 exe） |
+
+全部发布物见 [Releases](https://github.com/625045508/windows-defender-remover-cn/releases)。
+
 ## 项目模块
 
 各子模块的详细说明见：
